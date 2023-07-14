@@ -1,5 +1,6 @@
 // commonJS: how to properly share modules from one file to another 
-const addFn = require('./add');
+const math = require('./math');
+const { add, subtract } = math;
 const SuperHero = require('./super-hero');
 
 // Module Scope
@@ -8,10 +9,8 @@ require('./superman');
 
 console.log("Hello World!");
 
-const sum = addFn(2, 3);
-const sum2 = addFn(3, 4);
-console.log(sum);
-console.log(sum2);
+console.log(add(2,3));
+console.log(subtract(2,3));
 
 /*
 const superHero = require('./super-hero'); // saved in cache
