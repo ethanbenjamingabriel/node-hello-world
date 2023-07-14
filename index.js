@@ -1,6 +1,10 @@
 // commonJS: how to properly share modules from one file to another 
 const addFn = require('./add');
 
+// Module Scope
+require('./batman');
+require('./superman');
+
 console.log("Hello World!");
 
 const sum = addFn(2, 3);
